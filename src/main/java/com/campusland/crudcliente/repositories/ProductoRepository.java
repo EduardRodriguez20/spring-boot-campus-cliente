@@ -9,7 +9,7 @@ import com.campusland.crudcliente.repositories.entities.Producto;
 
 public interface ProductoRepository extends CrudRepository<Producto, Long>{
    
-    @Query("SELECT p FROM Producto WHERE p.nombre LIKE %?1%")
+    @Query("SELECT p FROM Producto p WHERE p.nombre LIKE %?1%")
     List<Producto> findByNombre(String nombre);
     
     List<Producto> findByNombreContainingIgnoreCase (String term);

@@ -16,32 +16,32 @@ public class ProductoController {
     
     private ProductoService productoService;
 
-    @RequestMapping("/save")
+    @PostMapping("/")
     public Producto save(@RequestBody Producto producto) {
         return productoService.save(producto);
     }
 
-    @RequestMapping("/findAll")
+    @GetMapping("/")
     public List<Producto> findAll() {
         return productoService.findAll();
     }
 
-    @RequestMapping("/findById/{id}")
+    @GetMapping("/findById/{id}")
     public Producto findById(@PathVariable Long id) {
         return productoService.findById(id);
     }
 
-    @RequestMapping("/findByName/{email}")
+    @GetMapping("/findByName/{email}")
     public Producto findByName(@PathVariable String nombre) {
         return productoService.findByName(nombre);
     }
     
-    @RequestMapping("/update/{id}")
+    @PutMapping("/update/{id}")
     public Producto update(@PathVariable Long id, @RequestBody Producto producto) {
         return productoService.update(id, producto);
     }
 
-    @RequestMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable Long id) {
         productoService.delete(id);
     }
