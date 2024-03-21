@@ -21,6 +21,7 @@ public class ProductoServiceImpl implements ProductoService{
         return (List<Producto>) productoRepository.findAll();
     }
 
+    @SuppressWarnings("null")
     @Override
     public Producto findById(Long id) {
         return (Producto) productoRepository.findById(id).orElse(null);
@@ -31,16 +32,19 @@ public class ProductoServiceImpl implements ProductoService{
         return (Producto) productoRepository.findByNombre(name);
     }
 
+    @SuppressWarnings("null")
     @Override
     public Producto save(Producto producto) {
         return productoRepository.save(producto);
     }
 
+    @SuppressWarnings("null")
     @Override
     public Producto update(Long id, Producto producto) {
         return productoRepository.save(producto);
     }
 
+    @SuppressWarnings("null")
     @Override
     public void delete(Long id) {
         productoRepository.deleteById(id);

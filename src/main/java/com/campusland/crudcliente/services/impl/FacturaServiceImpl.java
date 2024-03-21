@@ -27,6 +27,7 @@ public class FacturaServiceImpl implements FacturaService {
         return (List<Factura>) facturaRepository.findAll();
     }
 
+    @SuppressWarnings("null")
     @Override
     public void deleteById(Long id) {
         facturaRepository.deleteById(id);
