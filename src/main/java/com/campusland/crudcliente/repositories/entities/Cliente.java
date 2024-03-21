@@ -43,5 +43,9 @@ public class Cliente {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date   createAt; 
 
-    
+    public String getNombreCompleto(){
+        return nombre + " " + apellido;
+    }
+
+
 }

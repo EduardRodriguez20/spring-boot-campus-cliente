@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 
+import com.campusland.crudcliente.dto.FacturaDTO;
 import com.campusland.crudcliente.repositories.entities.Factura;
 import com.campusland.crudcliente.services.FacturaService;
 
@@ -22,7 +23,7 @@ public class FacturaController {
     }
 
     @GetMapping("/")
-    public List<Factura> findAll() {
+    public List<FacturaDTO> findAll() {
         return facturaService.findAll();
     }
 

@@ -15,7 +15,11 @@ public class ItemFacturaDTOConvert {
     private ModelMapper mapper;
 
     public ItemFacturaDTO convertDTO(ItemFactura itemFactura) {
-        return mapper.map(itemFactura, ItemFacturaDTO.class);
+        ItemFacturaDTO dto = new ItemFacturaDTO();
+        dto.setCantidad(itemFactura.getCantidad());
+        dto.setProducto(itemFactura.getProducto().getNombre());
+        dto.setPrecio(itemFactura.getProducto().getPrecio());
+        return dto;
     }
 
     public ItemFactura convertEntity(ItemFacturaDTO dto) {
