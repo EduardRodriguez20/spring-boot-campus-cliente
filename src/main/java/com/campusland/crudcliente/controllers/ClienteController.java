@@ -34,7 +34,7 @@ public class ClienteController {
 
     private ClienteService clienteService;
 
-    @GetMapping("/")
+    @GetMapping("/listar")
     public List<Cliente> findAll() {
         return clienteService.findAll();
     }

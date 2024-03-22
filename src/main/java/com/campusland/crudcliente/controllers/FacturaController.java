@@ -17,12 +17,12 @@ public class FacturaController {
     
     private FacturaService facturaService;
 
-    @PostMapping("/")
+    @PostMapping("/guardar")
     public Factura save(@RequestBody Factura factura) {
         return facturaService.save(factura);
     }
 
-    @GetMapping("/")
+    @GetMapping("/listar")
     public List<FacturaDTO> findAll() {
         return facturaService.findAll();
     }

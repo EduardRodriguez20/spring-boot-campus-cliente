@@ -29,3 +29,17 @@ INSERT INTO item_factura (cantidad, facturas_id, productos_id) VALUES(1, 1, 7);
 
 INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura Bicicleta', 'Alguna nota importante!', 2, NOW());
 INSERT INTO item_factura (cantidad, facturas_id, productos_id) VALUES(3, 2, 6);
+
+
+
+-- Insertar datos en la tabla users
+INSERT INTO users (email, pwd) VALUES ('account@debuggeandoieas.com', 'to_be_encoded');
+INSERT INTO users (email, pwd) VALUES ('cards@debuggeandoieas.com', 'to_be_encoded');
+INSERT INTO users (email, pwd) VALUES ('loans@debuggeandoieas.com', 'to_be_encoded');
+INSERT INTO users (email, pwd) VALUES ('balance@debuggeandoieas.com', 'to_be_encoded');
+
+--Insertar datos en las tabla de roles
+INSERT INTO roles (role_name, description, id_user) VALUES ('ROLE_ADMIN', 'admin role', 1);      
+INSERT INTO roles (role_name, description, id_user) VALUES ('ROLE_ADMIN', 'admin role', 2); 
+INSERT INTO roles (role_name, description, id_user) VALUES ('ROLE_USER', 'user role', 3); 
+INSERT INTO roles (role_name, description, id_user) VALUES ('ROLE_USER', 'user role', 4); 
